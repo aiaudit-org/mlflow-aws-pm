@@ -1,7 +1,8 @@
 FROM python:3.8.0
 
-RUN pip install \
-    mlflow==1.12.1 \
+RUN wget https://aiaudit.org/assets/mlflow-1.14.2.dev0-py3-none-any.whl && \
+    pip install \
+    mlflow-1.14.2.dev0-py3-none-any.whl \
     pymysql==0.10.1 \
     boto3 && \
     mkdir /mlflow/
